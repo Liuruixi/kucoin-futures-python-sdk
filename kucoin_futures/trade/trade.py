@@ -5,8 +5,6 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_fund_history(self, symbol, startAt=None, endAt=None, reverse=True, offset=0, forward=True, maxCount=10):
         """
-        https://docs.kumex.com/#get-funding-history
-
         :param symbol: interest symbol (Mandatory)
         :type: str
         :param startAt: start time(milisecond) (optional)
@@ -61,7 +59,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_position_details(self, symbol):
         """
-        https://docs.kumex.com/#get-position-details
+        https://docs.kucoin.com/futures/#get-position-details
 
         :param symbol: interest symbol (Mandatory)
         :type: str
@@ -112,7 +110,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_all_position(self):
         """
-        https://docs.kumex.com/#get-position-list
+        https://docs.kucoin.com/futures/#get-position-list
         :return:
         [{
           "id": "5ce3cda60c19fc0d4e9ae7cd",                //Position ID
@@ -158,7 +156,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def modify_auto_deposit_margin(self, symbol, status=True):
         """
-        https://docs.kumex.com/#enable-disable-of-auto-deposit-margin
+        https://docs.kucoin.com/futures/#enable-disable-of-auto-deposit-margin
 
         :param  symbol: interest symbol (Mandatory)
         :param status: True is open, False is off  default True (Mandatory)
@@ -174,7 +172,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def add_margin_manually(self, symbol, margin, bizNo):
         """
-        https://docs.kumex.com/#add-margin-manually
+        https://docs.kucoin.com/futures/#add-margin-manually
 
         :param symbol:  (Mandatory)
         :type: str
@@ -193,7 +191,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_fills_details(self, symbol='', orderId='', side='', type='', startAt=None, endAt=None, **kwargs):
         """
-        https://docs.kumex.com/#get-fills
+        https://docs.kucoin.com/futures/#get-fills
         :param symbol: [optional] Symbol of the contract
         :type: str
         :param orderId: List fills for a specific order only (If you specify orderId, other parameters can be ignored) [optional]
@@ -257,7 +255,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_recent_fills(self):
         """
-        https://docs.kumex.com/#recent-fills
+        https://docs.kucoin.com/futures/#recent-fills
 
         :return:
         [{
@@ -285,7 +283,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_open_order_details(self, symbol):
         """
-        https://docs.kumex.com/#active-order-value-calculation
+        https://docs.kucoin.com/futures/#active-order-value-calculation
 
         :param symbol: interest symbol (Mandatory)
         :type: str
@@ -302,7 +300,7 @@ class TradeData(KucoinFuturesBaseRestApi):
         """
         Place Limit Order Functions
 
-        https://docs.kumex.com/#place-an-order
+        https://docs.kucoin.com/futures/#place-an-order
 
         :param symbol: interest symbol (Mandatory)
         :type: str
@@ -340,7 +338,7 @@ class TradeData(KucoinFuturesBaseRestApi):
         """
         Place Market Order Functions
 
-        https://docs.kumex.com/#place-an-order
+        https://docs.kucoin.com/futures/#place-an-order
 
         :param symbol: interest symbol (Mandatory)
         :type: str
@@ -371,7 +369,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def cancel_order(self, orderId):
         """
-        https://docs.kumex.com/#cancel-an-order
+        https://docs.kucoin.com/futures/#cancel-an-order
 
         :param orderId: str  (Mandatory)
         :return:{'cancelledOrderIds': ['5d9ee77825aa3809494eac87']}
@@ -382,7 +380,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def cancel_all_limit_order(self, symbol):
         """
-        https://docs.kumex.com/#limit-order-mass-cancelation
+        hhttps://docs.kucoin.com/futures/#limit-order-mass-cancelation
 
         :param symbol: str  (Mandatory)
         :return:{'cancelledOrderIds': ['5d9d684ef24b806897632962', '5d9dd98725aa380949298eb0', ...]}
@@ -394,7 +392,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def cancel_all_stop_order(self, symbol):
         """
-        https://docs.kumex.com/#stop-order-mass-cancelation
+        https://docs.kucoin.com/futures/#stop-order-mass-cancelation
 
         :param symbol: str  (Mandatory)
         :return:{'cancelledOrderIds': ['5d9d684ef24b806897632962', '5d9dd98725aa380949298eb0', ...]}
@@ -406,7 +404,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_order_list(self, **kwargs):
         """
-        https://docs.kumex.com/#get-order-list
+        https://docs.kucoin.com/futures/#get-order-list
 
          return List your current orders.
 
@@ -463,7 +461,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_open_stop_order(self, **kwargs):
         """
-        https://docs.kumex.com/#get-untriggered-stop-order-list
+        https://docs.kucoin.com/futures/#get-untriggered-stop-order-list
 
         :param kwargs:c
         :return:
@@ -517,7 +515,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_24h_done_order(self, **kwargs):
         """
-        https://docs.kumex.com/#get-list-of-orders-completed-in-24h
+        https://docs.kucoin.com/futures/#get-list-of-orders-completed-in-24h
         :param kwargs: [optional] currentPage , pageSize  and so on
         :return:
          {
@@ -571,7 +569,7 @@ class TradeData(KucoinFuturesBaseRestApi):
 
     def get_order_details(self, orderId):
         """
-        https://docs.kumex.com/#get-details-of-a-single-order
+        https://docs.kucoin.com/futures/#get-details-of-a-single-order
         Get a single order by order id (including a stop order).
         :param orderId: str
         :return:

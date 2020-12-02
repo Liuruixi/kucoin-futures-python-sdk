@@ -1,11 +1,11 @@
-from kucoin_futures.base_request.base_request import KumexBaseRestApi
+from kucoin_futures.base_request.base_request import KucoinFuturesBaseRestApi
 
 
-class GetToken(KumexBaseRestApi):
+class GetToken(KucoinFuturesBaseRestApi):
 
     def get_ws_token(self, is_private=False):
         """
-        https://docs.kumex.com/#apply-for-connection-token
+        hhttps://docs.kucoin.com/futures/#apply-for-connection-token
         :param is_private private or public
         :return:
         """

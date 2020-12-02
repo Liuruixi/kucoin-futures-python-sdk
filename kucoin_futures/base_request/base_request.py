@@ -15,7 +15,7 @@ class KucoinFuturesBaseRestApi(object):
 
     def __init__(self, key='', secret='', passphrase='', is_sandbox=False, url=''):
         """
-        https://docs.kumex.com
+        https://docs.kucoin.com/futures/#general
 
         :param key: Api Token Id  (Mandatory)
         :type key: string
